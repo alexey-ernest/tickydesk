@@ -1,0 +1,29 @@
+{
+  "name": "tickydesk",
+  "version": "1.0.0",
+  "description": "Ticket monitoring desk.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexey-ernest/tickydesk"
+  },
+  "keywords": [
+    "ticket",
+    "monitoring",
+    "air",
+    "desk"
+  ],
+  "author": "Alexey Melnikov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexey-ernest/tickydesk/issues"
+  },
+  "homepage": "https://github.com/alexey-ernest/tickydesk",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "request": "^2.58.0"
+  }
+}
