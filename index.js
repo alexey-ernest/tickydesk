@@ -1,9 +1,12 @@
-var request = require('request');
-var debug = require('debug')('tickydesk:scanner');
-var QPX = require('./lib/qpx');
+var AirfareScanner = require('./lib/airfare-scanner');
 
-var api_key = process.env.QPX_API_KEY;
-var qpx = new QPX(api_key);
+var scanner = new AirfareScanner(30000);
+scanner.on('data', function (data) {
+  console.log('Flight best price is ' + JSON.stringify(data));
+});
+scanner.on('error', function (err) {
+  console.error(err);
+});
 
 var tripOptions = {
   adults: 1,
@@ -12,10 +15,4 @@ var tripOptions = {
   date: '2015-08-15',
   dateBack: '2015-08-29'
 };
-qpx.find(tripOptions, function (err, result) {
-  if (err) {
-    throw err;
-  }
-
-  console.log(result);
-});
+scanner.scan(tripOptions);
