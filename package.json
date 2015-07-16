@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/alexey-ernest/tickydesk",
   "dependencies": {
+    "cassandra-driver": "^2.1.2",
     "debug": "^2.2.0",
     "request": "^2.58.0"
   }

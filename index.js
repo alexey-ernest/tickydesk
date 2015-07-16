@@ -1,4 +1,5 @@
 var AirfareScanner = require('./lib/airfare-scanner');
+var Airfare = require('./models/airfare');
 
 var scanner = new AirfareScanner(30000);
 scanner.on('data', function (data) {
@@ -15,4 +16,7 @@ var tripOptions = {
   date: '2015-08-15',
   dateBack: '2015-08-29'
 };
-scanner.scan(tripOptions);
+//scanner.scan(tripOptions);
+
+var airfare = new Airfare();
+airfare.connect();
