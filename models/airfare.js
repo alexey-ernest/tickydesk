@@ -8,11 +8,12 @@ var cassandraHosts = process.env.CASSANDRA_HOSTS.split(',');
 var cassandraUsername = process.env.CASSANDRA_USERNAME;
 var cassandraPassword = process.env.CASSANDRA_PASSWORD;
 
-var authProvider = new cassandra.auth.PlainTextAuthProvider(cassandraUsername, 
+var authProvider = new cassandra.auth.PlainTextAuthProvider(cassandraUsername,
   cassandraPassword);
 var client = new cassandra.Client({
   contactPoints: cassandraHosts,
-  authProvider: authProvider
+  authProvider: authProvider,
+  keyspace: 'airfare'
 });
 
 var Airfare = function (obj) {
