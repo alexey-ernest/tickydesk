@@ -62,7 +62,7 @@ Trip.get = function (id, fn) {
         id: data.tripid,
         adults: data.adults,
         originAirport: data.origin_airport,
-        destionationAirport: data.destination_airport,
+        destinationAirport: data.destination_airport,
         date: data.date,
         dateBack: data.date_back
       };

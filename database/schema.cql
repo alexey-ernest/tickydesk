@@ -15,7 +15,7 @@ CREATE TABLE trip (
 
 CREATE TABLE airfare (
    tripid uuid,
-   airfareid timeuuid,
+   datetime timestamp,
    price int,
-   PRIMARY KEY (tripid, airfareid)
-) WITH CLUSTERING ORDER BY (airfareid ASC);
+   PRIMARY KEY (tripid, datetime)
+) WITH CLUSTERING ORDER BY (datetime ASC);
