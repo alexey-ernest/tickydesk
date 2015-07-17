@@ -6,7 +6,7 @@ use airfare;
 CREATE TABLE trip (
    tripid uuid,
    adults int,
-   origin_airpot text,
+   origin_airport text,
    destination_airport text,
    date text,
    date_back text,
