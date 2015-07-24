@@ -1,1 +1,1 @@
-worker: node lib/scaner.js
+worker: node lib/scanner.js
